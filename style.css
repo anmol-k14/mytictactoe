@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2&family=Roboto&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  background-color: #000426;
+  color: #d3a9ba;
+}
+
+nav {
+  background-color: #000426;
+  
+  height: 65px;
+  font-size: 27px;
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  font-family: "Roboto", sans-serif;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+.gameContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: repeat(3, 10vw);
+  grid-template-columns: repeat(3, 10vw);
+  font-family: "Roboto", sans-serif;
+  position: relative;
+}
+
+.box {
+  margin: auto auto;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  border-width: 2px;
+  border-color: #d3a9ba;
+  margin: 10px;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 8vw;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box:hover {
+  background-color: #d3a9ba;
+}
+
+.boxtext {
+  background-color: transparent;
+  color: #ae1755;
+}
+
+.info {
+  font-size: 22px;
+}
+
+.gameInfo {
+  padding: 0 34px;
+  font-family: "Baloo Bhaina 2", cursive;
+}
+
+.gameInfo h1 {
+  font-size: 2.5rem;
+}
+
+.imgbox img {
+  width: 0;
+  transition: width 1s ease-in-out;
+}
+
+
+#reset {
+    appearance: none;
+    background-color: transparent;
+    border: 2px solid rgb(211, 169, 186);
+    border-radius: 15px;
+    box-sizing: border-box;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    font-size: 16px;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0;
+    min-height: 60px;
+    min-width: 0;
+    outline: none;
+    padding: 16px 24px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    will-change: transform;
+    margin-left: 10px;
+}
+
+#reset:hover {
+  
+  
+    box-shadow: rgba(211, 169, 186, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+    background-color: #AE1755;
+  }
+
+#reset:active {
+    box-shadow: none;
+    transform: translateY(0);
+  }
+
+.line {
+  background-color: black;
+  height: 3px;
+  width: 0;
+  position: absolute;
+  background-color: #d3a9ba;
+  transition: width 1s ease-in-out;
+  z-index: 3;
+}
+
+@media screen and (max-width: 950px) {
+  .gameContainer {
+    flex-wrap: wrap;
+  }
+  .gameInfo {
+    margin-top: 34px;
+  }
+  .gameInfo h1 {
+    font-size: 1.5rem;
+  }
+  .container {
+    grid-template-rows: repeat(3, 20vw);
+    grid-template-columns: repeat(3, 20vw);
+  }
+}
